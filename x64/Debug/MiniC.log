@@ -1,0 +1,22 @@
+﻿  stdafx.cpp
+  analyse.cpp
+d:\git project\minic-compiler\analyse.cpp(73): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  analyseSemantic.cpp
+d:\git project\minic-compiler\analysesemantic.cpp(216): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  cgen.cpp
+  code.cpp
+  MiniC.cpp
+  MiniCDlg.cpp
+d:\git project\minic-compiler\minicdlg.cpp(244): warning C4244: “参数”: 从“wchar_t”转换到“char”，可能丢失数据
+d:\git project\minic-compiler\minicdlg.cpp(257): warning C4244: “参数”: 从“wchar_t”转换到“char”，可能丢失数据
+d:\git project\minic-compiler\minicdlg.cpp(299): warning C4244: “参数”: 从“wchar_t”转换到“char”，可能丢失数据
+d:\git project\minic-compiler\minicdlg.cpp(318): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+d:\git project\minic-compiler\minicdlg.cpp(321): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  parse.cpp
+  scan.cpp
+d:\git project\minic-compiler\scan.cpp(37): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  symtab.cpp
+  util.cpp
+d:\git project\minic-compiler\util.cpp(201): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码...
+  MiniC.vcxproj -> D:\Git Project\MiniC-Compiler\x64\Debug\MiniC.exe

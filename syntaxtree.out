@@ -1,0 +1,50 @@
+
+MiniC Óï·¨·ÖÎö£º
+
+MiniC Óï·¨Ê÷:
+  Function Declaration: Return Type: [int] Name: gcd
+    ParamList:
+      Type: [int] Name: u 
+      Type: [int] Name: v 
+    Compound:
+      Local Declarations:
+      StatementList:
+        If
+          Op: ==
+            Id: v
+            const: 0
+          return
+            Id: u
+          Else
+            return
+              Call Function:gcd()
+                ArgList:
+                  Args:
+                    Id: v
+                    Op: -
+                      Id: u
+                      Op: *
+                        Op: /
+                          Id: u
+                          Id: v
+                        Id: v
+  Function Declaration: Return Type [void] Name: main 
+    ParamList:
+      EMPTY
+    Compound:
+      Local Declarations:
+        Var Declaration: Name: x Type: [int] 
+        Var Declaration: Name: y Type: [int] 
+      StatementList:
+        Assign to: x
+          Call Function:input()
+        Assign to: y
+          Call Function:input()
+        Call Function:output()
+          ArgList:
+            Args:
+              Call Function:gcd()
+                ArgList:
+                  Args:
+                    Id: x
+                    Id: y

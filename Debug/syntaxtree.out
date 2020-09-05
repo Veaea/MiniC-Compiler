@@ -1,0 +1,136 @@
+
+TINY Syntax Analyse!
+
+TINY Syntax tree:
+  Var Declaration: Name: x Type: [int*] 
+  Function Declaration: Return Type: [int] Name: minloc
+    ParamList:
+            Type: [int] Name: low 
+      Type: [int] Name: high 
+    Compound:
+      Local Declarations:
+        Var Declaration: Name: i Type: [int] 
+        Var Declaration: Name: x Type: [int] 
+        Var Declaration: Name: k Type: [int] 
+      StatementList:
+        Assign to: k
+          Id: low
+        Assign to: x
+          Id: a[]
+            Id: low
+        Assign to: i
+          Op: +
+            Id: low
+            const: 1
+        While
+          Op: <
+            Id: i
+            Id: high
+          Compound:
+            Local Declarations:
+            StatementList:
+              If
+                Op: <
+                  Id: a[]
+                    Id: i
+                  Id: x
+                Compound:
+                  Local Declarations:
+                  StatementList:
+                    Assign to: x
+                      Id: a[]
+                        Id: i
+                    Assign to: k
+                      Id: i
+              Assign to: i
+                Op: +
+                  Id: i
+                  const: 1
+        return
+          Id: k
+  Function Declaration: Return Type [void] Name: sort 
+    ParamList:
+            Type: [int] Name: low 
+      Type: [int] Name: high 
+    Compound:
+      Local Declarations:
+        Var Declaration: Name: i Type: [int] 
+        Var Declaration: Name: k Type: [int] 
+      StatementList:
+        Assign to: i
+          Id: low
+        While
+          Op: <
+            Id: i
+            Op: -
+              Id: high
+              const: 1
+          Compound:
+            Local Declarations:
+              Var Declaration: Name: t Type: [int] 
+            StatementList:
+              Assign to: k
+                Call Function:minloc()
+                  ArgList:
+                    Args:
+                      Id: a
+                      Id: i
+                      Id: high
+              Assign to: t
+                Id: a[]
+                  Id: k
+              Assign to: a
+                Id: a[]
+                  Id: i
+              Assign to: a
+                Id: t
+              Assign to: i
+                Op: +
+                  Id: i
+                  const: 1
+  Function Declaration: Return Type [void] Name: main 
+    ParamList:
+      EMPTY
+    Compound:
+      Local Declarations:
+        Var Declaration: Name: i Type: [int] 
+      StatementList:
+        Assign to: i
+          const: 0
+        While
+          Op: <
+            Id: i
+            const: 10
+          Compound:
+            Local Declarations:
+            StatementList:
+              Assign to: x
+                Call Function:input()
+              Assign to: i
+                Op: +
+                  Id: i
+                  const: 1
+              Call Function:sort()
+                ArgList:
+                  Args:
+                    Id: x
+                    const: 0
+                    const: 10
+              Assign to: i
+                const: 0
+              While
+                Op: <
+                  Id: i
+                  const: 10
+                Compound:
+                  Local Declarations:
+                  StatementList:
+                    Call Function:output()
+                      ArgList:
+                        Args:
+                          Id: x[]
+                            Id: i
+                    Assign to: i
+                      Op: +
+                        Id: i
+                        const: 1
